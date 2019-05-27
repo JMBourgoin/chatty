@@ -485,3 +485,210 @@ Did you mean?  session):
 app/controllers/application_controller.rb:5:in `current_user'
 app/controllers/application_controller.rb:18:in `logged_in?'
 app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb___2417968668195399128_70324404758880'
+Started GET "/" for ::1 at 2019-05-27 12:04:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (121.4ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007feb5a55eb58>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb___2417968668195399128_70324403025360'
+Started GET "/" for ::1 at 2019-05-27 12:04:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (116.8ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007feb5bd6aeb8>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb___2417968668195399128_70324417400000'
+Started GET "/" for ::1 at 2019-05-27 12:04:37 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jasonbourgoin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (158.4ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f592ce28>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209756195700'
+Started GET "/" for ::1 at 2019-05-27 12:05:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (107.4ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f58b6818>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209726652660'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (24.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jbourgoin"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jason@jmbourgoin.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "password_digest", "created_at", "updated_at", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "jason"], ["last_name", "bourgoin"], ["username", "jbourgoin"], ["email", "jason@jmbourgoin.com"], ["password_digest", "$2a$10$vMOghztvdPuelQ4ISGzNz.1Z5RKcxNxz0yCeI8xT96arqI/u/r8ty"], ["created_at", "2019-05-27 16:07:01.897874"], ["updated_at", "2019-05-27 16:07:01.897874"], ["session_token", "YspcNOox2FNYPWxeqX4a8w"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2019-05-27 12:07:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (136.2ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f7258438>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209756109080'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2019-05-27 12:08:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (119.4ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f72c7ce8>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209756313780'
+Started GET "/" for ::1 at 2019-05-27 12:11:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (140.6ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f74ab758>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209743195180'
+Started GET "/" for ::1 at 2019-05-27 12:12:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (123.4ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f3b6d3b0>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209735127720'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jbomb"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bone"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "password_digest", "created_at", "updated_at", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "jas"], ["last_name", "bourg"], ["username", "jbomb"], ["email", "bone"], ["password_digest", "$2a$10$.K68zBtNQuZyEKDvANeNb.UizjqMk/MaCsG0gSmHtcG8XFVxLeAbi"], ["created_at", "2019-05-27 16:14:50.556109"], ["updated_at", "2019-05-27 16:14:50.556109"], ["session_token", "V5Dp6OAUhtiRVBHZfjdENg"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2019-05-27 12:14:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (138.3ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f7410f50>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209757008680'
+Started GET "/" for ::1 at 2019-05-27 12:15:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (109.3ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007fb5f3b61678>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb__3454279244202061208_70209758228220'
+Started GET "/" for ::1 at 2019-05-27 12:15:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+Started GET "/" for ::1 at 2019-05-27 12:17:58 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jasonbourgoin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 1632ms (Views: 1623.3ms | ActiveRecord: 2.9ms)
+
+
