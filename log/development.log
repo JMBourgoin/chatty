@@ -406,3 +406,82 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-27 11:58:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (243.9ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007feb59933bd0>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb___2417968668195399128_70324418140800'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7155997081170417795)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSessionTokenColumn (20190527160109)
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.2ms)[0m  [1m[35mALTER TABLE "users" ADD "session_token" character varying NOT NULL[0m
+  ↳ db/migrate/20190527160109_add_session_token_column.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190527160109"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7155997081170417795)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-05-27 12:02:57 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jasonbourgoin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (662.2ms)
+Completed 500 Internal Server Error in 668ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007feb5a3545d8>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb___2417968668195399128_70324403715260'
+Started GET "/" for ::1 at 2019-05-27 12:03:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (119.3ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `session_token' for #<StaticPagesController:0x00007feb5a204d68>
+Did you mean?  session):
+    1: <% if logged_in? %>
+    2:   <script id="bootstrap-current-user" type="text/javascript">
+    3:   	window.currentUser = <%= render("api/users/user.json.jbuilder",
+    4:   		user: current_user).html_safe %>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:18:in `logged_in?'
+app/views/static_pages/root.html.erb:1:in `_app_views_static_pages_root_html_erb___2417968668195399128_70324404758880'
