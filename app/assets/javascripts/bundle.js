@@ -99,21 +99,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var store; // if (window.currentUser) {
-  //     const preloadedState = {
-  //         session: { currentUserId: window.currentUser.id },
-  //         entities: {
-  //             users: { [window.currentUser.id]: window.currentUser }
-  //         }
-  // };
-  //     store = configureStore(preloadedState);
-  //     delete window.currentUser;
-  // } else {
-  //     store = configureStore();
-  // }
+  var store;
+
+  if (window.currentUser) {
+    var preloadedState = {
+      session: {
+        currentUserId: window.currentUser.id
+      },
+      entities: {
+        users: _defineProperty({}, window.currentUser.id, window.currentUser)
+      }
+    };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
 
   window.getState = store.getState();
   var root = document.getElementById('root');

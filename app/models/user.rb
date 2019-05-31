@@ -22,6 +22,12 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     has_many :messages, dependent: :destroy
+    has_many :user_channels
+
+    has_many :user_channels
+    through: :user_channels,
+    source: :channel
+    
 
     def password=(password)
         @password = password

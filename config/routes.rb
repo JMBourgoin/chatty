@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show, :destroy]
     resource :session, only: [:create, :show, :destroy]
-    resources :messages
+    resources :messages, only: [:create, :show, :destroy]
+    resources :channels, only: [:create, :show, :index]
+    post "/dm_channels", to: "cahnels#create_dm"
   end
 end

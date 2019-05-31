@@ -1,5 +1,7 @@
 class ChatChannel < ApplicationCable::ChatChannel
     def subscribed
-        stream_from "chat_#{params[:room]}"
+        channel = Channel.find_by(id: [params[:id]])
+        stream_for channel
+        load(parmas[:id])
     end
 end
