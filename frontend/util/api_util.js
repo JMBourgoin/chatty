@@ -39,7 +39,7 @@ export const fetchMessage = id => {
     });
 };
 
-export const createMessage = notebook => {
+export const createMessage = message => {
     return $.ajax({
         url: `api/messages/`,
         method: 'POST',
@@ -47,4 +47,27 @@ export const createMessage = notebook => {
     });
 };
 
+// Channels ---------------------------------
+
+export const fetchAllChannels = () => {
+    return $.ajax({
+        url: 'api/channels/',
+        method: 'GET'
+    });
+};
+
+export const fetchChannel = id => {
+    return $.ajax({
+        url: `api/channels/${id}`,
+        method: 'GET'
+    });
+};
+
+export const createChannel = channel => {
+    return $.ajax({
+        url: `api/channel/`,
+        method: 'POST',
+        data: { channel }
+    });
+};
 
