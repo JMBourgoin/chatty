@@ -19,7 +19,9 @@ class ChannelsController < ApplicationController
     end
 
     def create_dm
-        @cahnnel
+        @channel = Channel.new(channel_parmams)
+        @channel["direct_message?"] = true
+       
     end
 
     def destroy
