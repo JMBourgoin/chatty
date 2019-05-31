@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :show, :destroy]
     resources :messages, only: [:create, :show, :destroy]
     resources :channels, only: [:create, :show, :index]
-    post "/dm_channels", to: "cahnels#create_dm"
+    post "/dm_channels", to: "channels#create_dm"
   end
 end
