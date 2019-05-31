@@ -47,8 +47,8 @@ export const fetchMessage = (id) => dispatch => {
         ));
 };
 
-export const createMessage = (Message) => dispatch => {
-    return ApiUtil.createMessage(Message).then(message => dispatch(receiveNote(message)),
+export const createMessage = (message) => dispatch => {
+    return ApiUtil.createMessage(message).then(message => dispatch(receiveMessage(message)),
         err => (dispatch(receiveErrors(err.responseJSON))
         ));
 };
